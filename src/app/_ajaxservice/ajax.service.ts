@@ -14,7 +14,7 @@ export class AjaxService {
         const xhr: any = new XMLHttpRequest();
 
         xhr.open(httpMethod, url);
-        xhr.setRequestHeader( 'Content-type' , 'application/json');
+        xhr.setRequestHeader( 'Content-Type' , 'application/json');
         xhr.send(sendData);
         xhr.onload = function () {
             if (200 <= xhr.status && xhr.status <= 299) {

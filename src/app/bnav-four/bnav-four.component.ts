@@ -10,6 +10,11 @@ import { AjaxService } from '../_ajaxservice/ajax.service';
 })
 export class BnavFourComponent implements OnInit {
 
+  // dev
+  // baseUrl = 'http://localhost:53599/api/';
+  // prod
+  baseUrl = 'https://mangeapi.azurewebsites.net/api/';
+  displayname: any;
   nextCount: any;
   nowCount: any;
   locationId: any;
@@ -18,77 +23,22 @@ export class BnavFourComponent implements OnInit {
   , private ajax: AjaxService) { }
 
   ngOnInit() {
-    this.ajax
-    .postAsync('http://localhost:53599/api/QueueNumber/GetQueueNumber',
+    this.ajax.postAsync( this.baseUrl + 'QueueNumber/GetQueueNumber',
     {
-      'shop_id': '01',
-      'counter_id': '01'
-    }
-    )
+      shop_id: '01',
+      counter_id: '01'
+    })
     .then((data) => {
+      console.log('ajax=' + data);
       this.nowCount = data;
       this.nextCount = this.nowCount;
       this.nextCount++;
     });
-    // myBtn
-    // $(document).on('click', '#myBtn', function() {
-    //   $.ajax({
-    //     type: 'post',
-    //     url: 'http://linebootaward.azurewebsites.net/api/Queue/nextCall',
-    //     data: {
-    //       'company_id': '1'
-    //     },
-    //     success: function(data) {
-    //       //  console.log('s-dget=' + JSON.stringify(data));
-    //       //  console.log(data['get_number'][0]);
-    //       console.log(data);
-    //       // this.alertify.message('抽號成功');
-    //     }
-    //   });
 
-    // });
-    // $.ajax({
-    //   type: 'post',
-    //   url: 'http://linebootaward.azurewebsites.net/api/Queue/GetCard',
-    //   data: {
-    //     'company_id': '1' ,
-    //     'customer_id': 'U02651d25e09b9e0cd129cca58477edbd'
-    //   },
-    //   success: function(data) {
-    //     console.log('s-dget=' + JSON.stringify(data));
-    //     //  console.log(data['get_number'][0]);
-    //      $('.waitcount').children('.datatext').text(data['get_number'] + '號');
-    //      $('.waittime').children('.datatext').text(data['wait_time'] + '分鐘');
-    //   }
-    // });
+   this.displayname = localStorage.getItem('displayName');
   }
 
   finger() {
-    // $.ajax({
-    //   type: 'post',
-    //   url: 'http://linebootaward.azurewebsites.net/api/Queue/nextCall',
-    //   data: {
-    //     'company_id': '1'
-    //   },
-    //   success: function(data) {
-    //     //  console.log('s-dget=' + JSON.stringify(data));
-    //     //  console.log(data['get_number'][0]);
-    //     console.log(data);
-    //     $.ajax({
-    //       type: 'post',
-    //       url: 'http://linebootaward.azurewebsites.net/api/Queue/addUser',
-    //       data: {
-    //         'company_id': '1'
-    //       },
-    //       success: function(data2) {
-    //         //  console.log('s-dget=' + JSON.stringify(data));
-    //         //  console.log(data['get_number'][0]);
-    //         console.log(data2);
-    //         // this.alertify.message('抽號成功');
-    //       }
-    //     });
-    //   }
-    // });
     this.router.navigate(['/getnumber' , { 'nextCount': this.nextCount }]);
   }
 }

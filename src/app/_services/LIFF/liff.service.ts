@@ -11,27 +11,26 @@ export class LiffService {
 
   constructor() {
     liff.init(function (data) {
-      console.log(data);
-      this.data = data;
+      alert('sid=' + data.context.userId);
     });
   }
 
-  liff_getUserId(): string {
-    if (this.data) {
-      return this.data.context.userId;
-    }
-    return 'not on line app1';
+  liff_getUserId(): any {
+    liff.init((data) => {
+      alert('uid=' + data.context.userId);
+      return 'uid=' + data.context.userId;
+    });
   }
 
   liff_getUserName(): any {
-    if (this.data) {
+
+    liff.init((data) => {
       liff.getProfile().then(function (profile) {
-          return profile.displayName;
+        return profile.displayName;
       }).catch(function (error) {
           window.alert('Error getting profile: ' + error);
       });
-    }
-    return 'not on line app2';
+    });
   }
 }
 

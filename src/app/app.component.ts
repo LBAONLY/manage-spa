@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { LiffService } from './_services/LIFF/liff.service';
-
+declare var liff: any;
 
 @Component({
   selector: 'app-root',
@@ -58,12 +58,24 @@ import { LiffService } from './_services/LIFF/liff.service';
 export class AppComponent implements OnInit {
   title = 'Liff-Queue-SPA';
 
-  constructor(private liff: LiffService) {
-
+  constructor() {
   }
   ngOnInit() {
-    alert(this.liff.liff_getUserId());
-    alert(this.liff.liff_getUserName());
+    // alert(this.liff.liff_getUserId());
+    // alert(this.liff.liff_getUserName());
+    liff.init(function (data) {
+
+      // alert('sid=' + data.context.userId);
+      localStorage.setItem('liffId', data.context.userId);
+
+      liff.getProfile().then(function (profile) {
+        // alert('profile.displayName=' + profile.displayName);
+        localStorage.setItem('displayName', profile.displayName);
+      }).catch(function (error) {
+          window.alert('Error getting profile: ' + error);
+      });
+
+    });
     $(document).on('click', '#jqclick', function(event) {
       alert('jqclick');
     });
