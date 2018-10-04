@@ -1,0 +1,94 @@
+ /* 漂浮按鈕 */
+ #myBtn {
+  /* display: none; */
+  /* position: fixed;
+  bottom: 80px; */
+  /* right: 30px;  */
+  z-index: 4500;
+  font-size: 25px;
+  width: 132px;
+  height:132px;
+  border: none;
+  outline: none;
+  background-color: #18AECC;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  left: 52%;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /* margin: 5% auto; */
+  /* padding: 10px; */
+  /* 字距 */
+  letter-spacing: 1px;
+  /* 行距 */
+
+  bottom: 113px;
+  z-index: 200;
+  box-shadow: #000 0 2px 18px;
+}
+
+#myBtn >.f-text {
+  font-size: 56.49px;
+}
+
+
+/* 排隊文字 */
+
+.bodySection {
+  color: #000000;
+  background-color: #A4DAE8;
+  /* background: url('../../assets/c-img/bg-pattern.png'),rgb(252, 252, 252);  */
+  /* background-image:url('img/bg-pattern.png'), linear-gradient(to right, rgb(10, 111, 173) ,#1DA1F2 );   */
+  height: 90vh;
+  z-index: 0;
+  /* background: url(../img/bg-pattern.png),-webkit-gradient(linear,top bottom,left top,from(#7b4397),to(#dc2430)) !important;
+  background: url(../img/bg-pattern.png),linear-gradient(to bottom,#7b4397,#dc2430) !important; */
+}
+
+  .bodySection > .ShopPhoto {
+    background-color: #FFFFFF;
+    width: 100vw;
+    text-align: center;
+    height: 185px;
+    background-image:url('../../assets/c-img/queue-header.jpg');
+  }
+
+  /* queueManage */
+  .ShowFinger {
+      height: 330px;
+      width: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+      /* display: flex; */
+    }
+.ShowFinger > .system_count{
+  /* flex: 6; */
+  border:inherit;
+  margin-top: 61px;
+  font-size: 24px;
+  font-family:微軟正黑體;
+  letter-spacing: 3px;
+  width: 100vw;
+}
+.system_count > .waitcount {
+  /* margin-top: 12px; */
+}
+/* .system_count > .waittime {
+  margin-top: 16px;
+} */
+.system_count > .inline_text {
+  border:inherit;
+  display: flex;
+}
+.system_count > .inline_text > .title {
+  flex:2;
+  border:inherit;
+  text-align: center;
+}
+.system_count > .inline_text  > .datatext {
+  border:inherit;
+  flex: 1;
+}

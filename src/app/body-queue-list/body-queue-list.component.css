@@ -1,0 +1,210 @@
+.toLeft{
+  margin-left: -10px;
+}
+
+.bodySection {
+color: rgb(139, 138, 138);
+background-color: #EEEEEE;
+/* background: url('../../assets/c-img/bg-pattern.png'),rgb(252, 252, 252);  */
+/* background-image:url('img/bg-pattern.png'), linear-gradient(to right, rgb(10, 111, 173) ,#1DA1F2 );   */
+height: 90vh;
+z-index: 0;
+/* background: url(../img/bg-pattern.png),-webkit-gradient(linear,top bottom,left top,from(#7b4397),to(#dc2430)) !important;
+background: url(../img/bg-pattern.png),linear-gradient(to bottom,#7b4397,#dc2430) !important; */
+}
+
+.bodySection > .header-content {
+width: 100vw;
+text-align: center;
+}
+
+/* queueManage */
+.ShowCount {
+    height: 80px;
+    width: 100%;
+    /* border:1px solid rgb(0, 0, 0); */
+    background-color: #FFFFFF;
+    display: flex;
+  }
+  .ShowCount > .system_state{
+    flex: 4;
+    /* border:1px solid rgb(0, 0, 0); */
+    display: flex;
+  }
+
+  .system_state > .togglebar {
+    flex: 1;
+    border:inherit;
+  }
+  .system_state > .togglebar > .t-item {
+    margin-left:16px;
+    margin-top:19px;
+    height: 20px !important;
+  }
+  .system_state > .status {
+    flex: 2;
+    border:inherit;
+  }
+  .system_state > .status > .t-item {
+    margin-left:10px;
+    margin-top:19px;
+    font-size:20px;
+  }
+
+  .ShowCount > .system_count{
+    flex: 6;
+    border:inherit;
+  }
+  .system_count > .waitcount {
+    margin-top: 12px;
+  }
+  /* .system_count > .waittime {
+    margin-top: 16px;
+  } */
+  .system_count > .inline_text {
+    border:inherit;
+    display: flex;
+  }
+  .system_count > .inline_text > .title {
+    flex:2;
+    border:inherit;
+    text-align: center;
+  }
+  .system_count > .inline_text  > .datatext {
+    border:inherit;
+    flex: 1;
+  }
+
+
+/* 叫號清單  */
+    .ShowList {
+      /* 待調整 */
+      height: 534px;
+      width: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+      text-align: center;
+      overflow: auto;
+    }
+    .ShowList > .list_container {
+      display: inline-block;
+      margin-top: 20px;
+      width: 360px;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .list_container > .accordion {
+      margin-bottom: 8px;
+    }
+    .list_container > .accordion > .li {
+      width: 100%;
+      height: 46px;
+      display: flex;
+      /* border:1px solid rgb(0, 0, 0); */
+      background-color: #FFFFFF;
+    }
+    .list_container > .accordion > .panel {
+      width: 100%;
+      height: 132px;
+      /* border:1px solid rgb(0, 0, 0); */
+      background-color: #FAFAFA;
+    }
+
+    .Accactive, .accordion:hover {
+      background-color: #ccc;
+    }
+    .accordion > .li > .circle{
+      flex: 1;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion > .li > .count{
+      flex: 0.5;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion > .li > .displayname{
+      flex: 1.5;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion > .li > .title{
+      flex: 3;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion > .li > .status{
+      flex: 1.5;
+      height: 100%;
+      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion > .li > * > .text {
+      margin-top:10px;
+    }
+    .accordion > .li >.status >.status_text {
+      font-size: 10px;
+    }
+
+
+    .accordion > .panel{
+      /* display: inline-flex; */
+      flex-direction:column;
+      flex-wrap:wrap;
+      display: none;
+    }
+    .accordion > .panel > .title {
+      width: 100%;
+     height: 45px;
+      display: flex;
+    }
+    .panel > .title > .text {
+      flex: 3;
+    }
+    .panel > .title > .edit , .panel > .title > .delete {
+      flex: 1;
+    }
+    .accordion > .panel > .textarea {
+      width: 100%;
+      height: 85px;
+    }
+      /* 漂浮按鈕 */
+    #myBtn {
+      /* display: none; */
+      /* position: fixed;
+      bottom: 80px; */
+      /* right: 30px;  */
+      z-index: 4500;
+      font-size: 25px;
+      width: 80px;
+      height:80px;
+      border: none;
+      outline: none;
+      background-color: #1DA1F2;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+      position: fixed;
+      left: 52%;
+      -ms-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      /* margin: 5% auto; */
+      /* padding: 10px; */
+      /* 字距 */
+      letter-spacing: 1px;
+      /* 行距 */
+
+      bottom: 80px;
+      z-index: 200;
+      box-shadow: #000 0 2px 18px;
+    }
+    /* #myBtn >.f-text {
+      margin-bottom: 1px;
+    } */
+
+    #btn_center{
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }

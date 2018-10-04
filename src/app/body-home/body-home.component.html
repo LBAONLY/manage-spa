@@ -1,0 +1,23 @@
+
+  <div class="to-center-parent screen-height">
+    <div *ngIf="!registerMode"  style="text-align: center">
+      <h1>選擇註冊方式</h1>
+      <p class="lead">使用Line帳號登入嗎?</p>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2 mdl-shadow--4dp" 
+         (click)="registerToggle()">&nbsp;&nbsp;&nbsp;&nbsp;
+         註冊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <button class="btn btn-info btn-lg mdl-shadow--4dp">使用Line帳號</button>
+      </div>
+    </div>
+  
+    <div *ngIf="registerMode" class="container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+           <!-- <app-register 
+           (cancelRegister)="cancelRegisterMode($event)">
+           </app-register> -->
+        </div>
+      </div>
+    </div>
+  </div>

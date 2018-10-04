@@ -1,0 +1,30 @@
+<div class="custom-bottom-navbar bottomNav-shadow">
+  <div class="container-fluid">
+    <nav class=" icon-inactive" >
+      <a [routerLink]="['/body-home']" icon-inactive-1>
+        <span class="fa fa-user-plus icon-inactive-1 icon-size"></span>
+        <span class="bottom-navbar-text icon-inactive-1 ">註冊</span>
+      </a>
+      <a [routerLink]="['/queue-list']" routerLinkActive="active" class="icon-inactive-2">
+        <span class="fab fa-google-play icon-inactive-2 icon-size"></span>
+        <span class="bottom-navbar-text icon-inactive-2 ">回覆</span>
+      </a>
+      <a [routerLink]="['/queue']" routerLinkActive="active" class="icon-inactive-3">
+        <span class="fas fa-gamepad icon-active-3 icon-size"></span>
+        <span class="bottom-navbar-text icon-active icon-inactive-3 ">平台</span>
+      </a>
+      <!-- <a href="#">
+        <span class="fa fa-map icon-inactive icon-size"></span>
+        <span class="bottom-navbar-text">附近地標</span>
+      </a> -->
+      <a [routerLink]="['/newqueue']" routerLinkActive="active" class="icon-inactive-4">
+        <span class="fas fa-users icon-inactive-4 icon-size"></span>
+        <span class="bottom-navbar-text icon-inactive-4 ">排隊</span>
+      </a>
+      <a [routerLink]="['/getnumber']" routerLinkActive="active" class="icon-inactive-5">
+        <span class="fab fa-quora icon-inactive-5 icon-size"></span>
+        <span class="bottom-navbar-text icon-inactive-5 ">通知</span>
+      </a>
+    </nav>
+  </div>
+</div>
