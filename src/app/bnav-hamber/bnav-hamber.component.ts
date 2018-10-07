@@ -16,8 +16,8 @@ export class BnavHamberComponent implements OnInit {
    this.val =  this.route.params['value'].nextCount;
   //  alert(this.val);
   }
-  NavToLine() {
-    alert('click');
-    this.routing.navigate(['https://line.me/R/ti/p/%40tlf2414x']);
-  }
+  // NavToLine() {
+  //   alert('click');
+  //   this.routing.navigate(['https://line.me/R/ti/p/%40tlf2414x']);
+  // }
 }

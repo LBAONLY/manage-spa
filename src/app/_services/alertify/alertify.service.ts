@@ -29,7 +29,14 @@ export class AlertifyService {
   }
 
   message(message: string) {
-    alertify.message(message);
+    const msg = `<div id="alertify-bot">
+          <div id="bot-icon">
+            <img src="../../../assets/icons/icon-96x96.png/" 
+              class="img-fluid">
+          </div>
+          <div id="bot-message">${message}</div></div>`;
+    alertify.set('notifier', 'position', 'top-right');
+    const displaymsg = alertify.message(msg);
   }
 
 }

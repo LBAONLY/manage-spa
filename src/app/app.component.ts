@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { LiffService } from './_services/LIFF/liff.service';
+import { AlertifyService } from './_services/alertify/alertify.service';
 declare var liff: any;
 
 @Component({
@@ -58,7 +59,7 @@ declare var liff: any;
 export class AppComponent implements OnInit {
   title = 'Liff-Queue-SPA';
 
-  constructor() {
+  constructor(private alertify: AlertifyService) {
   }
   ngOnInit() {
     // alert(this.liff.liff_getUserId());
@@ -67,9 +68,8 @@ export class AppComponent implements OnInit {
 
       // alert('sid=' + data.context.userId);
       localStorage.setItem('liffId', data.context.userId);
-
       liff.getProfile().then(function (profile) {
-        // alert('profile.displayName=' + profile.displayName);
+        alert('profile.displayName=' + profile.displayName);
         localStorage.setItem('displayName', profile.displayName);
       }).catch(function (error) {
           window.alert('Error getting profile: ' + error);
