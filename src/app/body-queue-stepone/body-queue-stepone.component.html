@@ -1,0 +1,25 @@
+<section class="bodySection ">
+    <div class="ShopPhoto mdl-shadow--4dp">
+            <img class ="img-fluid" src="../../assets/c-img/queue-header.jpg" alt="排隊" >
+    </div>
+    <div class="ShowText">
+        <div class="system_count">
+            <div class="waitcount inline_text">
+                <div class="datatext">目前等待號碼:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{nowCount}} &nbsp; 號</div>
+            </div>
+            <div class="waittime inline_text">
+                <div class="datatext">平均等待時間:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... &nbsp;分鐘</div>
+            </div>
+        </div>
+        <div id="display_Btn" (click) ="finger()">
+            <button id="AddInQueueBtn">
+                <span class="f-text far fa-hand-point-down"></span>
+
+                <div class="s-text" >
+                    抽號
+                </div>
+                <!-- <div class=" mdl-spinner mdl-js-spinner is-active flexCenter"></div> -->
+            </button>
+        </div>
+    </div>
+</section>

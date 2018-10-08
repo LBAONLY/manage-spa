@@ -1,16 +1,14 @@
+
+
 .toLeft{
   margin-left: -10px;
 }
 
 .bodySection {
-color: rgb(139, 138, 138);
-background-color: #EEEEEE;
-/* background: url('../../assets/c-img/bg-pattern.png'),rgb(252, 252, 252);  */
-/* background-image:url('img/bg-pattern.png'), linear-gradient(to right, rgb(10, 111, 173) ,#1DA1F2 );   */
-height: 90vh;
-z-index: 0;
-/* background: url(../img/bg-pattern.png),-webkit-gradient(linear,top bottom,left top,from(#7b4397),to(#dc2430)) !important;
-background: url(../img/bg-pattern.png),linear-gradient(to bottom,#7b4397,#dc2430) !important; */
+  color: rgb(139, 138, 138);
+  background-color: #EEEEEE;
+  height: 90vh;
+  z-index: 0;
 }
 
 .bodySection > .header-content {
@@ -20,43 +18,41 @@ text-align: center;
 
 /* queueManage */
 .ShowCount {
-    height: 80px;
+    height: 13vh;
     width: 100%;
     /* border:1px solid rgb(0, 0, 0); */
     background-color: #FFFFFF;
     display: flex;
   }
-  .ShowCount > .system_state{
-    flex: 4;
+  .system_state{
     /* border:1px solid rgb(0, 0, 0); */
+    width: 47vw;
     display: flex;
   }
 
   .system_state > .togglebar {
-    flex: 1;
     border:inherit;
   }
   .system_state > .togglebar > .t-item {
     margin-left:16px;
-    margin-top:19px;
-    height: 20px !important;
+    margin-top: 2.6vh;
   }
   .system_state > .status {
-    flex: 2;
     border:inherit;
   }
   .system_state > .status > .t-item {
-    margin-left:10px;
-    margin-top:19px;
-    font-size:20px;
+    margin-left:4.4vw;
+    margin-top: 2.6vh;
+    font-size: 1.25em;
+    font-family: Noto Sans CJK TC;
   }
 
-  .ShowCount > .system_count{
-    flex: 6;
+   .system_count{
+    width: 53vw;
     border:inherit;
   }
   .system_count > .waitcount {
-    margin-top: 12px;
+    margin-top: 2.6vh;
   }
   /* .system_count > .waittime {
     margin-top: 16px;
@@ -66,20 +62,19 @@ text-align: center;
     display: flex;
   }
   .system_count > .inline_text > .title {
-    flex:2;
     border:inherit;
     text-align: center;
   }
   .system_count > .inline_text  > .datatext {
     border:inherit;
-    flex: 1;
   }
 
 
 /* 叫號清單  */
     .ShowList {
       /* 待調整 */
-      height: 534px;
+      height: 78vh;
+      padding-top: 3.6vh;
       width: 100%;
       /* border:1px solid rgb(0, 0, 0); */
       text-align: center;
@@ -87,20 +82,20 @@ text-align: center;
     }
     .ShowList > .list_container {
       display: inline-block;
-      margin-top: 20px;
       width: 360px;
       height: 100%;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .list_container > .accordion {
-      margin-bottom: 8px;
+      margin-bottom: 1.3vh;
     }
     .list_container > .accordion > .li {
       width: 100%;
-      height: 46px;
+      height: 7.5vh;
       display: flex;
       /* border:1px solid rgb(0, 0, 0); */
       background-color: #FFFFFF;
+      z-index: 100;
     }
     .list_container > .accordion > .panel {
       width: 100%;
@@ -113,37 +108,47 @@ text-align: center;
       background-color: #ccc;
     }
     .accordion > .li > .circle{
-      flex: 1;
+      width: 12.8vw;
       height: 100%;
-      /* border:1px solid rgb(0, 0, 0); */
+    }
+    .accordion >.li >.circle >.img {
+      border:1px solid rgb(0, 0, 0);
+      border-radius: 50%;
+      width: 8.3vw;
+      height: 8.3vw;
+      margin: 2.2vw;
     }
     .accordion > .li > .count{
-      flex: 0.5;
+      width: 9.4vw;
       height: 100%;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .accordion > .li > .displayname{
-      flex: 1.5;
+      width: 18.6vw;
       height: 100%;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .accordion > .li > .title{
-      flex: 3;
+      width: 30vw;
       height: 100%;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .accordion > .li > .status{
-      flex: 1.5;
+      width: 18.4vw;
       height: 100%;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .accordion > .li > * > .text {
-      margin-top:10px;
+      margin-top:1.79vh;
     }
     .accordion > .li >.status >.status_text {
-      font-size: 10px;
+      font-size: 0.93em;
+      margin-top: 1.3vh;
     }
-
+    .accordion > .li >.status >.status_time{
+      font-size: 0.93em;
+      /* margin-bottom: 1.3vh; */
+    }
 
     .accordion > .panel{
       /* display: inline-flex; */
@@ -173,9 +178,9 @@ text-align: center;
       bottom: 80px; */
       /* right: 30px;  */
       z-index: 4500;
-      font-size: 25px;
-      width: 80px;
-      height:80px;
+      font-size: 1.25em;
+      width: 9.4vh;
+      height: 9.4vh;
       border: none;
       outline: none;
       background-color: #1DA1F2;
@@ -194,7 +199,7 @@ text-align: center;
       letter-spacing: 1px;
       /* 行距 */
 
-      bottom: 80px;
+      bottom: 11.7vh;
       z-index: 200;
       box-shadow: #000 0 2px 18px;
     }

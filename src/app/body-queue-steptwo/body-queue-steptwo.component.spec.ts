@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { BnavFourComponent } from './bnav-four.component';
+import { BodyQueueSteptwoComponent } from './body-queue-steptwo.component';
 
-describe('BnavFourComponent', () => {
-  let component: BnavFourComponent;
-  let fixture: ComponentFixture<BnavFourComponent>;
+describe('BodyQueueSteptwoComponent', () => {
+  let component: BodyQueueSteptwoComponent;
+  let fixture: ComponentFixture<BodyQueueSteptwoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BnavFourComponent ]
+      declarations: [ BodyQueueSteptwoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BnavFourComponent);
+    fixture = TestBed.createComponent(BodyQueueSteptwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

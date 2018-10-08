@@ -12,26 +12,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { HeaderComponent } from './header/header.component';
-import { BnavFourComponent } from './bnav-four/bnav-four.component';
+
 
 import { AlertifyService } from './_services/alertify/alertify.service';
 import { ErrorInterceptorProvide } from './_services/errorHandler/error.interceptor';
 import { AuthService } from './_services/auth.service';
-import { BodyHomeComponent } from './body-home/body-home.component';
 import { BodyQueueComponent } from './body-queue/body-queue.component';
 import { BodyQueueListComponent } from './body-queue-list/body-queue-list.component';
 import { BnavHamberComponent } from './bnav-hamber/bnav-hamber.component';
+import { BodyMemberComponent } from './body-member/body-member.component';
+import { BodyQueueSteponeComponent } from './body-queue-stepone/body-queue-stepone.component';
+import { BodyQueueSteptwoComponent } from './body-queue-steptwo/body-queue-steptwo.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       BottomNavComponent,
       HeaderComponent,
-      BnavFourComponent,
-      BodyHomeComponent,
       BodyQueueComponent,
       BodyQueueListComponent,
-      BnavHamberComponent
+      BnavHamberComponent,
+      BodyMemberComponent,
+      BodyQueueSteponeComponent,
+      BodyQueueSteptwoComponent
    ],
    imports: [
       BrowserModule,

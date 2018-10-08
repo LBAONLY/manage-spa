@@ -1,22 +1,18 @@
 import { Routes } from '@angular/router';
-import { BodyHomeComponent } from './body-home/body-home.component';
 import { BodyQueueComponent } from './body-queue/body-queue.component';
 import { BodyQueueListComponent } from './body-queue-list/body-queue-list.component';
-import { BnavFourComponent } from './bnav-four/bnav-four.component';
 import { BnavHamberComponent } from './bnav-hamber/bnav-hamber.component';
+import { BodyMemberComponent } from './body-member/body-member.component';
+import { BodyQueueSteponeComponent  } from './body-queue-stepone/body-queue-stepone.component';
+import { BodyQueueSteptwoComponent } from './body-queue-steptwo/body-queue-steptwo.component';
 
 export const appRoutes: Routes = [
-    { path: '', component: BodyHomeComponent },
+    { path: '', component: BodyQueueSteponeComponent },
     { path: 'queue', component: BodyQueueComponent },
-    { path: 'register', component: BodyHomeComponent},
+    { path: 'register', component: BodyMemberComponent},
     { path: 'queue-list', component: BodyQueueListComponent },
-    { path: 'newqueue',
-      component: BnavFourComponent,
-      // children: [
-      //   { path: 'getnumber',
-      //     component: BnavHamberComponent }
-      // ]
-    },
+    { path: 'newqueue', component: BodyQueueSteponeComponent },
+    { path: 'newqueue/steptwo', component: BodyQueueSteptwoComponent },
     { path: 'getnumber', component: BnavHamberComponent },
     { path: '**', redirectTo: '', pathMatch: 'full'}
 ];

@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-body-home',
-  templateUrl: './body-home.component.html',
-  styleUrls: ['./body-home.component.css']
+  selector: 'app-body-member',
+  templateUrl: './body-member.component.html',
+  styleUrls: ['./body-member.component.css']
 })
-export class BodyHomeComponent implements OnInit {
+export class BodyMemberComponent implements OnInit {
 
   registerMode = false;
-
   constructor() { }
 
   ngOnInit() {
   }
-
   registerToggle() {
     this.registerMode = true;
   }

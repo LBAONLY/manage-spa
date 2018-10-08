@@ -3,7 +3,7 @@
     <div class="system_state">
         <div class="togglebar t-item">
             <label class="t-item mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
-                <input type="checkbox" id="switch-2" class="mdl-switch__input">
+                <input type="checkbox" id="switch-2" class="sw-bg mdl-switch__input">
                 <span class="mdl-switch__label"></span>
             </label>
         </div>
@@ -13,30 +13,26 @@
     </div>
     <div class="system_count">
       <div class="waitcount inline_text">
-        <div class="title">目前等待號碼:</div>
-        <div class="datatext">5&nbsp;&nbsp;號</div>
+        <div class="title">目前等待號碼:&nbsp;&nbsp;&nbsp;&nbsp;{{waiting_number}}&nbsp;&nbsp;&nbsp;&nbsp;號</div>
       </div>
       <div class="waittime inline_text">
-        <div class="title">平均等待時間:</div>
-        <div class="datatext">12&nbsp;&nbsp;分鐘</div>
+        <div class="title">平均等待時間:&nbsp;&nbsp;&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;分鐘</div>
       </div>
     </div>
   </div>
   <div class="ShowList">
     <div class="list_container box" >
-        <div class="accordion" [(ngModel)] = "list"
+        <div class="accordion"
         *ngFor="let item of list">
             <div class="li mdl-shadow--3dp ">
               <div class="circle" (click) = "openAccordion($event)">
-                  <div class="text">
-                  圓
-                  </div>
+                  <img class="img img-fluid" src="../../assets/c-img/icon-user-50.png" alt="user"/>
               </div>
               <div class="count">
-                <div class="text">{{item.number}}</div>
+                <div class="text">{{item.queue_number}}</div>
               </div>
               <div class="displayname">
-                <div class="text">{{item.name}}</div>
+                <div class="text">{{item.display_name}}</div>
               </div>
               <div class="title">
                 <div class="text">A號餐</div>
@@ -45,7 +41,7 @@
                 <div class="status_text">
                   等待回覆
                 </div>
-                <div class="time">
+                <div class="status_time">
                   15:55
                 </div>
               </div>

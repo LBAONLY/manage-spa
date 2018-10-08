@@ -21,6 +21,7 @@ export class AlertifyService {
   }
 
   error(message: string) {
+    alertify.set('notifier', 'position', 'top-right');
     alertify.error(message);
   }
 
@@ -31,8 +32,7 @@ export class AlertifyService {
   message(message: string) {
     const msg = `<div id="alertify-bot">
           <div id="bot-icon">
-            <img src="../../../assets/icons/icon-96x96.png/" 
-              class="img-fluid">
+            <img src="../../../assets/icons/icon-96x96.png" class="img-fluid">
           </div>
           <div id="bot-message">${message}</div></div>`;
     alertify.set('notifier', 'position', 'top-right');

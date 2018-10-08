@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
       // alert('sid=' + data.context.userId);
       localStorage.setItem('liffId', data.context.userId);
       liff.getProfile().then(function (profile) {
-        alert('profile.displayName=' + profile.displayName);
+        // alert('profile.displayName=' + profile.displayName);
         localStorage.setItem('displayName', profile.displayName);
       }).catch(function (error) {
           window.alert('Error getting profile: ' + error);

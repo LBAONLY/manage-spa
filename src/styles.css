@@ -21,21 +21,33 @@ body{
 }
 #bot-icon {
     margin-right:1em; 
-    background-image: url('./assets/icons/icon-96x96.png');
-    width: 6vh;
-    height: 6vh;
+    width: 12vw;
+    height: 12vw;
     border-radius:50%; 
 }
 #bot-icon > img {
     border-radius:50%;
 }
+#bot-message {
+    text-align: left;
+    font-family: 微軟正黑體;
+    padding:0;
+}
 
 .alertify-notifier.ajs-right .ajs-message.ajs-visible {
     right:90vw;
+    padding: 0.5em 1em;
+    border: none;
+    /* 3dp */
+    box-shadow: 
+    0 3px 4px 0 rgba(0, 0, 0, 0.14), 
+    0 3px 3px -2px rgba(0, 0, 0, 0.2), 
+    0 1px 8px 0 rgba(0, 0, 0, 0.12); 
 }
 .alertify-notifier .ajs-message{
     width:80vw;
     border-radius: 0.6em;
+    color: #666666;
 }
 .mdl-shadow--2dp {
     box-shadow: 

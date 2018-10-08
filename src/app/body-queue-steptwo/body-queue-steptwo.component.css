@@ -1,0 +1,114 @@
+.body_content{
+    width: 100vw;
+    height: 54.5vh;
+}
+.display_count{
+    margin-top: 5.05vh;
+    width: 100vw;
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+}
+/* 漂浮按鈕 */
+#AddInQueueBtn {
+    font-size: 1.56em;
+    width: 21vh;
+    height: 21vh;
+    border: none;
+    outline: none;
+    background-color: #18AECC;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    /* 字距 */
+    /* 行距 */
+    z-index: 200;
+    box-shadow: #000 0 2px 18px;
+}
+
+#AddInQueueBtn > .f-text {
+    font-size: 2.6em;
+    margin-top: -1.8vh;
+    margin-bottom: -2vh;
+}
+
+#AddInQueueBtn > .s-text {
+    font-family: Noto Sans CJK TC;
+    font-size: 0.7em;
+}
+.notify{
+    margin-top: 3.84vh;
+    width: 100vw;
+    height: 4.8vh;
+    display: flex;
+    justify-content: center;
+}
+.cabcelbtn {
+    color: #666666;
+    font-family: Noto Sans CJK TC;
+    text-align: center !important;
+}
+
+.cabcelbtn:active {
+    background-color: rgb(155, 151, 151);
+    color: #FFFFFF;
+}
+/* 排隊文字 */
+
+.bodySection {
+    color: #000000;
+    background-color: #A4DAE8;
+    height: 90vh;
+    z-index: 0;
+   
+}
+
+.bodySection > .ShopPhoto {
+    background-color: #FFFFFF;
+    width: 100vw;
+    text-align: center;
+    height: 27.5vh;
+}
+.ShopPhoto > img {
+    width: 100%;
+    height: 100%;
+}
+/* queueManage */
+.ShowText {
+    margin-top: 3.6vh;
+    width: 100vw;
+    /* border:1px solid rgb(0, 0, 0);  */
+    color:  #666666;
+    letter-spacing: 0.2em;
+     display: flex;
+}
+
+.ShowText > .system_count {
+    border: inherit;
+    font-size: 1.2em;
+    font-family: 微軟正黑體;
+    width: 100vw;
+} 
+
+.system_count > .waitcount {
+    /* margin-top: 12px; */
+}
+.system_count > .waittime {
+}
+
+.system_count > .inline_text {
+    border: inherit;
+    display: flex;
+}
+
+.system_count > .inline_text > .title {
+    flex: 2;
+    border: inherit;
+    text-align: center;
+}
+
+.system_count > .inline_text > .datatext {
+    border: inherit;
+    flex: 1;
+    margin-left: -20vw;
+} 

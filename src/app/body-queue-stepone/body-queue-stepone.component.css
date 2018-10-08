@@ -1,0 +1,106 @@
+/* 漂浮按鈕 */
+
+#display_Btn {
+    margin-top: 4.5vh;
+    width: 100vw;
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+}
+#AddInQueueBtn {
+    font-size: 1.56em;
+    width: 21vh;
+    height: 21vh;
+    border: none;
+    outline: none;
+    background-color: #18AECC;;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    font-family: Noto Sans CJK TC;
+    box-shadow: #000 0 2px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    
+}
+
+#AddInQueueBtn:active {
+    width: 20vh;
+    height: 20vh;
+}
+
+#AddInQueueBtn > .f-text {
+    font-size: 2.8em;
+}
+
+#AddInQueueBtn > .s-text {
+    font-family: Noto Sans CJK TC;
+}
+
+#AddInQueueBtn > .flexCenter {
+    margin: auto;
+}
+
+/* #AddInQueueBtn > .mdl-spinner {
+    width: 10vh;
+    height: 10vh;
+}
+
+#AddInQueueBtn > .mdl-spinner__circle {
+border-width: 1.435vh;
+} */
+
+/* 排隊文字 */
+
+.bodySection {
+    color: #000000;
+    background-color: #A4DAE8;
+    height: 91vh;
+    z-index: 0;
+   
+}
+
+.bodySection > .ShopPhoto {
+    background-color: #FFFFFF;
+    width: 100vw;
+    text-align: center;
+    height: 27.5vh;
+}
+.ShopPhoto > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* queueManage */
+.ShowText {
+    height: 18vh;
+    width: 100vw;
+}
+
+.ShowText > .system_count {
+    border: inherit;
+    margin-top: 10vh;
+    font-size: 1.5em;
+    color: #666666;
+    font-family:微軟正黑體;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.system_count > .inline_text {
+    border: inherit;
+    display: flex;
+    width: 100%;
+}
+
+
+.system_count > .inline_text > .datatext {
+    border: inherit;
+    flex: 1;
+    text-align: center;
+}
