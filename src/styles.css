@@ -3,17 +3,12 @@
 @import '../node_modules/alertifyjs/build/css/alertify.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
 
+
 body{
     text-align: center;
     display: flex;
 }
-.alertify-notifier.ajs-top {
-    top: 9.1vh;
-    margin: 0px auto;
-}
-.alertify-notifier.ajs-right {
-    right: 0px;
-}
+
 #alertify-bot{
     display: flex;
     justify-content:flex-start;
@@ -33,17 +28,29 @@ body{
     font-family: 微軟正黑體;
     padding:0;
 }
+/* transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 
+.alertify-notifier.ajs-top {
+    top: 9.1vh;
+    margin: 0px auto;
+}
+.alertify-notifier.ajs-right {
+    right: 0px;
+}
+
+/* material design 3dp */
 .alertify-notifier.ajs-right .ajs-message.ajs-visible {
     right:90vw;
     padding: 0.5em 1em;
     border: none;
-    /* 3dp */
+    background-color: #FFFFFF;
     box-shadow: 
     0 3px 4px 0 rgba(0, 0, 0, 0.14), 
     0 3px 3px -2px rgba(0, 0, 0, 0.2), 
     0 1px 8px 0 rgba(0, 0, 0, 0.12); 
 }
+
 .alertify-notifier .ajs-message{
     width:80vw;
     border-radius: 0.6em;

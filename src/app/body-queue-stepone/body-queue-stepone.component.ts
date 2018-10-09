@@ -44,7 +44,7 @@ export class BodyQueueSteponeComponent implements OnInit {
       // alert(this.user_id);
     } else {
       this.user_id = 'testId';
-      alert(this.user_id);
+      console.log(this.user_id);
     }
 
     this.ajax.postAsync(this.baseUrl + 'QueueNumber/AddCustomerInQueue',

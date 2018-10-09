@@ -91,7 +91,8 @@ export class BodyQueueListComponent implements OnInit {
 
     this.ajax.postAsync( this.baseUrl + 'QueueManage/getQueueList',
     {
-      shop_id: localStorage.getItem('location_id'),
+      // localStorage.getItem('location_id')
+      shop_id: '01',
       counter_id: '01'
     })
     .then((data: string) => {
