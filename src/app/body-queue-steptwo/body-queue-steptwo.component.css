@@ -27,7 +27,7 @@
 }
 
 #AddInQueueBtn > .f-text {
-    font-size: 2.6em;
+    font-size: 2.4em;
     margin-top: -1.8vh;
     margin-bottom: -2vh;
 }
@@ -90,11 +90,11 @@
     width: 100vw;
 } 
 
-.system_count > .waitcount {
-    /* margin-top: 12px; */
+/* .system_count > .waitcount {
+    margin-top: 12px;
 }
 .system_count > .waittime {
-}
+} */
 
 .system_count > .inline_text {
     border: inherit;

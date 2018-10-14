@@ -8,15 +8,15 @@
             </label>
         </div>
         <div class="status t-item">
-          <div class="t-item" (click)="open()">營業中</div>
+          <div class="t-item" (click)="open()">OPEN TIME</div>
         </div>
     </div>
     <div class="system_count">
       <div class="waitcount inline_text">
-        <div class="title">目前等待號碼:&nbsp;&nbsp;&nbsp;&nbsp;{{waiting_number}}&nbsp;&nbsp;&nbsp;&nbsp;號</div>
+        <div class="title">Current Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{waiting_number}}&nbsp;&nbsp;號</div>
       </div>
       <div class="waittime inline_text">
-        <div class="title">平均等待時間:&nbsp;&nbsp;&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;分鐘</div>
+        <div class="title">Average Waiting Time:&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;Min</div>
       </div>
     </div>
   </div>
@@ -24,25 +24,22 @@
     <div class="list_container box" >
         <div class="accordion"
         *ngFor="let item of list">
-            <div class="li mdl-shadow--3dp ">
+            <div class="li mdl-shadow--3dp">
               <div class="circle" (click) = "openAccordion($event)">
-                  <img class="img img-fluid" src="../../assets/c-img/icon-user-50.png" alt="user"/>
+                  <img class="img img-fluid" src="../../assets/c-img/user-icon-blue.png" alt="user"/>
               </div>
               <div class="count">
                 <div class="text">{{item.queue_number}}</div>
               </div>
               <div class="displayname">
-                <div class="text">{{item.display_name}}</div>
+                <div class="text">Customer{{item.queue_number}}</div>
               </div>
               <div class="title">
-                <div class="text">A號餐</div>
+                <div class="text">......</div>
               </div>
               <div class="status">
                 <div class="status_text">
-                  等待回覆
-                </div>
-                <div class="status_time">
-                  15:55
+                  unread
                 </div>
               </div>
             </div>
@@ -63,10 +60,10 @@
         <button id="myBtn" title="Go to top"
         (click)="removeList()">
             <div class="f-text">
-                接下
+                Next
             </div>
             <div class="s-text">
-                一筆
+                Count
             </div>
         </button>
     <!-- </div> -->

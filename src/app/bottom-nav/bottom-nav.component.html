@@ -1,7 +1,42 @@
 <div class="custom-bottom-navbar mdl-shadow--4dp">
   <div class="container-fluid">
     <nav>
-      <a [routerLink]="['/newqueue']" 
+        <a [routerLink]="['/getnumber']"
+        [attr.data-icon]="5" 
+        (click) ="ActiveStyle($event)">
+          <span class="fab fa-quora icon-size"
+            [ngClass]="{'bnav_icon' : bnav_icon_5}">
+          </span>
+          <span class="bottom-navbar-text "
+            [ngClass]="{'bnav_icon' : bnav_icon_5}">
+            Home
+          </span>
+        </a>
+        <a [routerLink]="['/queue-list']" 
+        [attr.data-icon]="4" 
+        (click) ="ActiveStyle($event)">
+          <span class="fas fa-users icon-size iconstyle custom-fa"
+            [ngClass]="{'bnav_icon_outline' : bnav_icon_4}">
+          </span>
+          <span class="bottom-navbar-text"
+            [ngClass]="{'bnav_icon' : bnav_icon_4}">
+            Queue
+          </span>
+        </a>
+      <a [routerLink]="['/']"  
+      [attr.data-icon]="3" 
+      (click) ="ActiveStyle($event)">
+        <span 
+          [ngClass]="{'bnav_icon' : bnav_icon_3}"
+          class="fas fa-history icon-size">
+        </span>
+        <span 
+          [ngClass]="{'bnav_icon' : bnav_icon_3}"
+          class="bottom-navbar-text icon-active">
+          history
+        </span>
+      </a>
+      <!-- <a [routerLink]="['/newqueue']" 
       [attr.data-icon]="1" 
       (click) ="ActiveStyle($event)">
         <span 
@@ -13,52 +48,17 @@
           class="bottom-navbar-text icon-inactive-1 ">
           排隊
         </span>
-      </a>
+      </a> -->
       <a [routerLink]="['/register']" 
       [attr.data-icon]="2" 
       (click) ="ActiveStyle($event)">
         <span 
           [ngClass]="{'bnav_icon_outline' : bnav_icon_2}"
-          class="fa fa-user-plus icon-size custom-fa"></span>
+          class="fas fa-cog icon-size custom-fa"></span>
         <span 
           [ngClass]="{'bnav_icon' : bnav_icon_2}"
           class="bottom-navbar-text ">
-          會員
-        </span>
-      </a>
-      <a [routerLink]="['/queue']"  
-      [attr.data-icon]="3" 
-      (click) ="ActiveStyle($event)">
-        <span 
-          [ngClass]="{'bnav_icon_outline' : bnav_icon_3}"
-          class="fas fa-gamepad icon-size custom-fa">
-        </span>
-        <span 
-          [ngClass]="{'bnav_icon' : bnav_icon_3}"
-          class="bottom-navbar-text icon-active">
-          娛樂
-        </span>
-      </a>
-      <a [routerLink]="['/queue-list']" 
-      [attr.data-icon]="4" 
-      (click) ="ActiveStyle($event)">
-        <span class="fas fa-map-marker-alt icon-size iconstyle"
-          [ngClass]="{'bnav_icon' : bnav_icon_4}">
-        </span>
-        <span class="bottom-navbar-text"
-          [ngClass]="{'bnav_icon' : bnav_icon_4}">
-          店家
-        </span>
-      </a>
-      <a [routerLink]="['/getnumber']"
-      [attr.data-icon]="5" 
-      (click) ="ActiveStyle($event)">
-        <span class="fab fa-quora icon-size"
-          [ngClass]="{'bnav_icon' : bnav_icon_5}">
-        </span>
-        <span class="bottom-navbar-text "
-          [ngClass]="{'bnav_icon' : bnav_icon_5}">
-          首頁
+          Setting
         </span>
       </a>
     </nav>

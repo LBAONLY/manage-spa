@@ -1,23 +1,77 @@
 
-  <div class="to-center-parent screen-height">
-      <div *ngIf="!registerMode"  style="text-align: center">
-        <h1>選擇註冊方式</h1>
-        <p class="lead">使用Line帳號登入嗎?</p>
-        <div class="text-center">
-          <button class="btn btn-primary btn-lg mr-2 mdl-shadow--4dp" 
-           (click)="registerToggle()">&nbsp;&nbsp;&nbsp;&nbsp;
-           註冊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-          <button class="btn btn-info btn-lg mdl-shadow--4dp">使用Line帳號</button>
-        </div>
-      </div>
-    
-      <div *ngIf="registerMode" class="container">
-        <div class="row justify-content-center">
-          <div class="col-4">
-             <!-- <app-register 
-             (cancelRegister)="cancelRegisterMode($event)">
-             </app-register> -->
-          </div>
-        </div>
-      </div>
+<section class="bodySection ">
+  <div class="card mdl-shadow--2dp mb-3">
+      <div class="card-header card-t-1">Your ScanQ QRcode</div>
+      <table class="table table-bordered table-margin">
+          <thead>
+            <tr>
+              <th></th>
+              <th>QRCode</th>
+              <th>Shop Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <th scope="row">1</th>
+              <td >
+                <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+world&choe=UTF-8&chs=70x70" 
+                class="rounded" 
+                alt="QRCode">
+              <td>Sh-1</td>
+              <td>
+                <button class="btn  i-margin" title="Download">
+                    <i class="fa fa-download"></i>
+                </button>
+                <button class="btn" title="Edit">
+                  <i class="fa fa-edit "></i>
+                </button>
+              </td>
+            </tr> -->
+            <tr *ngFor="let item of list; let idx = index">
+              <th scope="row">{{idx+1}}</th>
+              <td>
+                <img [src]="item.src" 
+                class="rounded" 
+                alt="QRCode"> 
+              </td>
+              <td>{{item.shop_name}}</td>
+              <td>
+                  <button class="btn  i-margin" title="Download">
+                      <i class="fa fa-download"></i>
+                  </button>
+                  <button class="btn" title="Edit">
+                    <i class="fa fa-edit "></i>
+                  </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
+
+    <div class="card mdl-shadow--2dp mb-3">
+        <div class="card-header card-t-1">Generate QRcode</div>
+        
+        <form class="card-padding">
+            <div class="form-group">
+              <label for="ShopID">Shop ID</label>
+              <input  type="text" 
+                  disabled
+                  class="form-control" 
+                  id="ShopID" 
+                  [value]="shopid" 
+                  placeholder="Your Shop ID"
+                >
+            </div>
+            <div class="form-group">
+              <label for="ShopName" >Shop Name</label>
+              <input type="text" class="form-control" id="ShopName" placeholder="Your Shop Name">
+            </div>
+            <button type="button" (click) = "addQRCode()"
+            class="btn">Generate</button>
+          </form>
+      </div>
+
+          
+
+</section>

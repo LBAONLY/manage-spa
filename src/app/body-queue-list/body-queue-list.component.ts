@@ -116,6 +116,7 @@ export class BodyQueueListComponent implements OnInit {
     .then((data: string) => {
       console.log('ajax=' + data);
       // this.list = JSON.parse(data);
+      this.alertify.message(`Message has been sent to ${this.list[0].queue_number}!!`);
       this.set_waitingInfo();
     });
 

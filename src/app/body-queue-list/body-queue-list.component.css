@@ -42,7 +42,7 @@ text-align: center;
   }
   .system_state > .status > .t-item {
     margin-left:4.4vw;
-    margin-top: 2.6vh;
+    margin-top: 2.8vh;
     font-size: 1.25em;
     font-family: Noto Sans CJK TC;
   }
@@ -112,7 +112,7 @@ text-align: center;
       height: 100%;
     }
     .accordion >.li >.circle >.img {
-      border:1px solid rgb(0, 0, 0);
+      /* border:1px solid rgb(0, 0, 0); */
       border-radius: 50%;
       width: 8.3vw;
       height: 8.3vw;
@@ -139,11 +139,11 @@ text-align: center;
       /* border:1px solid rgb(0, 0, 0); */
     }
     .accordion > .li > * > .text {
-      margin-top:1.79vh;
+      margin-top:2.2vh;
     }
     .accordion > .li >.status >.status_text {
-      font-size: 0.93em;
-      margin-top: 1.3vh;
+      font-size: 0.95em;
+      margin-top: 2.2vh;
     }
     .accordion > .li >.status >.status_time{
       font-size: 0.93em;
@@ -179,8 +179,8 @@ text-align: center;
       /* right: 30px;  */
       z-index: 4500;
       font-size: 1.25em;
-      width: 9.4vh;
-      height: 9.4vh;
+      width: 9.7vh;
+      height: 9.7vh;
       border: none;
       outline: none;
       background-color: #1DA1F2;
@@ -202,6 +202,10 @@ text-align: center;
       bottom: 11.7vh;
       z-index: 200;
       box-shadow: #000 0 2px 18px;
+    }
+    #myBtn:active{
+      width: 9.4vh;
+      height: 9.4vh;
     }
     /* #myBtn >.f-text {
       margin-bottom: 1px;

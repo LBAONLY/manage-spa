@@ -13,7 +13,7 @@ export class BodyQueueSteptwoComponent implements OnInit {
   baseUrl = 'https://mangeapi.azurewebsites.net/api/';
 
   val: any;
-  displayname: string;
+  displayname = '客人';
   constructor(
     private route: ActivatedRoute,
     private routing: Router,
@@ -45,6 +45,26 @@ export class BodyQueueSteptwoComponent implements OnInit {
     })
     .then((data) => {
       console.log('ajax=' + data);
+      if (this.displayname) {
+        this.alertify.message(`${this.displayname}，請於Line中接收通知`);
+      } else {
+        this.alertify.message(`客人，請於Line中接收通知`);
+      }
+    });
+  }
+
+  SendReceiveInfo() {
+    this.ajax.postAsync( this.baseUrl + 'QueueManage/ReceiveNotify',
+    {
+      'user_id': 'Ucf64da86af345f8a009970a62e24763a',
+      'shop_id': localStorage.getItem('location_id'),
+      'shop_name': localStorage.getItem('location_name'),
+      'queue_number': this.val,
+      'display_name': this.displayname
+    })
+    .then((data: string) => {
+      console.log('ajax=' + data);
+      // this.list = JSON.parse(data);
       if (this.displayname) {
         this.alertify.message(`${this.displayname}，請於Line中接收通知`);
       } else {

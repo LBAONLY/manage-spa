@@ -7,3 +7,50 @@
 .screen-height {
     height: 80vh;
 }
+
+.bodySection {
+    color: rgb(139, 138, 138);
+    background-color: #EEEEEE;
+    height: 90vh;
+    z-index: 0;
+    padding: 5vw;
+    overflow: auto;
+}
+
+.card-padding{
+    padding:1em;
+    /* padding-left: 1em;
+    padding-right: 1em; */
+}
+.card-t-1{
+    font-size: 1.5em !important;
+}
+.form-control {
+    text-align: center;
+}
+.table-margin{
+    margin-top:1em; 
+}
+.i-margin{
+    margin-right: 0.4em;
+}
+.table > tbody > tr > td ,
+.table > tbody > tr > th 
+ {
+    vertical-align: middle;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
